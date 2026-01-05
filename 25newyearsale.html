@@ -167,73 +167,6 @@
   </div>
 </div>
 
-  <!-- 카운트다운 -->
-  <div id="countdown-container-pc">
-    <div id="countdown-pc"></div>
-  </div>
-
-  <style>
-    #countdown-container-pc{
-      width:100%;
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:linear-gradient(90deg,#2a223c,#2a223c);
-      text-align:center;
-      padding:30px 0;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-    #countdown-pc{
-      font-family:'Pretendard', sans-serif;
-      font-weight:600;
-      font-size:1.8em;
-      color:#574971;
-      display:flex;
-      align-items:center;
-    }
-    #countdown-pc strong{
-      font-size:1.9em;
-      color:#fff;
-      padding:0 5px;
-      font-weight:600;
-    }
-    #countdown-pc span{
-      color:#574971;
-      font-weight:500;
-      margin:0 4px;
-    }
-  </style>
-
-  <script>
-    (function(){
-      const countdownEndDate = new Date("2026-04-03T13:59:59").getTime();
-      const el = document.getElementById("countdown-pc");
-      if(!el) return;
-
-      function updateCountdown(){
-        const now = new Date().getTime();
-        const timeRemaining = countdownEndDate - now;
-
-        if(timeRemaining >= 0){
-          const days = Math.floor(timeRemaining / (1000*60*60*24));
-          const hours = Math.floor((timeRemaining % (1000*60*60*24)) / (1000*60*60));
-          const minutes = Math.floor((timeRemaining % (1000*60*60)) / (1000*60));
-          const seconds = Math.floor((timeRemaining % (1000*60)) / 1000);
-
-          el.innerHTML =
-            `종료까지&nbsp; <strong>${days}</strong><span>일 </span><strong>${hours}</strong><span>시 </span><strong>${minutes}</strong><span>분 </span><strong>${seconds}</strong><span>초 </span> 남았습니다.`;
-        }else{
-          el.innerHTML = "이벤트가 종료되었습니다.";
-          clearInterval(timer);
-        }
-      }
-      const timer = setInterval(updateCountdown, 1000);
-      updateCountdown();
-    })();
-  </script>
-
   <!-- 탭 메뉴 -->
   <style>
     .pcver .tabmenu-wrap{ width:100%; max-width:1902px; padding:0; font-size:0; margin:0 auto; }
@@ -458,74 +391,7 @@
     </div>
   </div>
 
-  <!-- 카운트다운 -->
-  <div id="countdown-container-mo">
-    <div id="countdown-mo"></div>
-  </div>
-
-  <style>
-    #countdown-container-mo{
-      width:100%;
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:linear-gradient(90deg,#2a223c,#2a223c);
-      text-align:center;
-      padding:28px 0;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-    #countdown-mo{
-      font-family:'Pretendard', sans-serif;
-      font-weight:600;
-      font-size:1.32em;
-      color:#574971;
-      display:flex;
-      align-items:center;
-    }
-    #countdown-mo strong{
-      font-size:1.8em;
-      color:#fff;
-      padding:0 3px;
-      font-weight:500;
-    }
-    #countdown-mo span{
-      color:#574971;
-      font-weight:500;
-      margin:0 1px;
-    }
-  </style>
-
-  <script>
-    (function(){
-      const countdownEndDate = new Date("2026-03-03T13:59:59").getTime();
-      const el = document.getElementById("countdown-mo");
-      if(!el) return;
-
-      function updateCountdown(){
-        const now = new Date().getTime();
-        const timeRemaining = countdownEndDate - now;
-
-        if(timeRemaining >= 0){
-          const days = Math.floor(timeRemaining / (1000*60*60*24));
-          const hours = Math.floor((timeRemaining % (1000*60*60*24)) / (1000*60*60));
-          const minutes = Math.floor((timeRemaining % (1000*60*60)) / (1000*60));
-          const seconds = Math.floor((timeRemaining % (1000*60)) / 1000);
-
-          el.innerHTML =
-            `남은 시간&nbsp;&nbsp;&nbsp;&nbsp;<strong>${days}</strong><span>일 :</span><strong>${hours}</strong><span>시 :</span><strong>${minutes}</strong><span>분 :</span><strong>${seconds}</strong><span>초</span>`;
-        }else{
-          el.innerHTML = "이벤트가 종료되었습니다.";
-          clearInterval(timer);
-        }
-      }
-      const timer = setInterval(updateCountdown, 1000);
-      updateCountdown();
-    })();
-  </script>
-
-  <!-- 이하 모바일 본문 (요청 주신 코드 그대로 유지) -->
+  
   <style>
     .mover .tabmenu-wrap{ width:100%; max-width:900px; padding:0; font-size:0; margin:0 auto; }
     .mover .tabmenu-wrap ul{ padding:0; font-size:0; margin:0; }
